@@ -184,6 +184,7 @@ To reproduce the results of this project:
 
 ```bash
 pip install -r requirements.txt
+```
 
 ## Author
 Sabina Gallo
