@@ -123,10 +123,21 @@ The explainability analysis helps connect the model output to interpretable pati
 
 ## Results
 
-The final model captures useful predictive signal for identifying patients at higher risk of missing their appointment.
+The final model captures useful predictive signal for identifying patients at higher risk of missing their appointment. Since the dataset is imbalanced, the evaluation focuses on the minority 'No_show = 1' class rather than overall accuracy.
+
+**Precision-Recall Analysis**  
+![Precision-Recall Curve](images/pr_curve_threshold.png)    
+The precision-recall curve shows the trade-off between detecting more no-shows and limiting false positives. The selected operating point improves recall for the no-show class compared with the default threshold.
+
+**Confusion Matrix**
+![Confusion Matrix](images/confusion_matrix_threshold.png)   
+The confusion matrix shows the final classification behaviour at the selected threshold. The model identifies a substantial number of no-show patients, but also produces many false positives, confirming that it is more appropriate for reminder prioritization than for automatic deicisons.
+
+**SHAP Explainability**   
+![SHAP Summary Plot](images/shap_summary.png)  
+SHAP analysis shows that waiting time is the most influential feature in the final model, followed by age and appointment-related temporal variables. This helps connect the model predictions to interpretable appointment patterns.
 
 The main findings are:
-
 - the no-show prediction problem is strongly affected by class imbalance
 - waiting time is the dominant predictive feature
 - XGBoost performs better than the other tested configurations within the explored search space
