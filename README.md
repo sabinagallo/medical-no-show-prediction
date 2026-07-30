@@ -5,7 +5,6 @@
 ![XGBoost](https://img.shields.io/badge/Model-XGBoost-green)
 ![SHAP](https://img.shields.io/badge/Explainability-SHAP-purple)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-# Medical Appointment No-Show Prediction
 
 BSc Artificial Intelligence — Machine Learning Project
 
@@ -198,5 +197,5 @@ pip install -r requirements.txt
 ```
 
 ## Author
-Sabina Gallo
+Sabina Gallo  
 BSc Artificial Intelligence @ Università di Pavia, Università degli Studi di Milano, Università degli Studi di Milano-Bicocca
